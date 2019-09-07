@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>repeat youtube bg</title>
+	<style>
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+
+		
+
+		.wrapper {
+			width: 100%;
+			
+			height: -webkit-fill-available;/*100%*/
+			height: 100vh;
+			position: relative;
+			overflow-x: hidden;
+			/* overflow-y: scroll; */
+			-webkit-overflow-scrolling: touch;
+			background-color: #000;
+		}
+
+		.floor2 {
+			background: #000;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+		}
+
+		.floor1{
+			position: absolute;
+			top: 0;
+			left: -100%;
+			width: 300%;
+			height: 100%;
+			/*點擊事件失效*/
+			pointer-events: none;
+			filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+			opacity: 1;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="floor1"> 
+			<div class="floor2">
+				<iframe id='background-movie-player' class='iframe' frameborder="0" width="100%" height="100%"
+				src="https://www.youtube.com/embed/CZoYuWA21SU?autoplay=1&controls=0&mute=1&rel=0&iv_load_policy=3&playlist=CZoYuWA21SU&loop=1"
+					frameborder="0"></iframe>					
+			</div>
+		</div>
+	</div>
+	<!-- 我的：鸚鵡 -->
+	<!-- src="https://www.youtube.com/embed/CZoYuWA21SU?autoplay=1&controls=0&mute=1&rel=0playlist=CZoYuWA21SU" -->
+	<!-- 外聯：音樂會 -->
+	<!-- src="https://www.youtube.com/embed/dxVqOIqUQ8E?autoplay=1&controls=0&mute=1&rel=0playlist=dxVqOIqUQ8E" -->
+	<!-- CONAMI -->
+	<!-- src="https://www.youtube.com/embed/iIQsI2Wdv1Y?autoplay=1&playsinline=1&loop=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fwww.konami.com&widgetid=1" -->
+
+
+	<!--
+	// 有效且實用
+	autoplay=1              自動播放
+	controls=0              時間控制 bar 的顯示
+	mute=1                  靜音
+	rel=0                   播結束的推薦影片顯示
+	playlist=<<video id>>   結束後接著播的影片<<id>>
+	loop=1                  再次播放原影片 (若沒有會只重播一次))(不可單獨使用，應與 playlist 屬性合用才有效果)	
+	playsinline=1           充許ios上播放時不全屏(0全屏/1取消)
+
+
+	// 無效果
+	disablekb=0             使 keyboard 事件失效
+	iv_load_policy=3       影片字幕 (def 1有/3取消)
+	modestbranding=1
+
+	// 官方明示己棄用
+	showinfo 
+	
+	-->
+
+	<!-- <script src='bg_player.js'></script> -->
+</body>
+
+</html>
