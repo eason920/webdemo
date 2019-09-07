@@ -4,7 +4,7 @@ $(function () {
 	$('.Read_More_btn').click(function () {
 		if(layoutType == 'a'){
 			$('.video-cover').css({display: 'none'});
-			$('.v-wrapper').css({display: 'block', height: $(window).width() * 0.6});
+			$('.v-wrapper').css({display: 'block', height: $(window).width() * 0.56});
 
 			var tag = document.createElement('script');
 			tag.src = "./js/youtube_iframe_api.js";
